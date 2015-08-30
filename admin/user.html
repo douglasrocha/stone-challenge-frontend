@@ -18,6 +18,17 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/css.css">
 
+    <script>
+        $(document).ready(function() {
+        
+            $("#salvar").click(function(){
+                var obj = { Id : 0, Username : $("#username")[0].value, Password : $("#password")[0].value, IsAdmin : $("#isadmin")[0].checked };
+                $.post("localhost:12739/insertuser/", obj);
+            });
+        
+        });
+    </script>
+    
 </head>
 <body>
 

@@ -18,6 +18,17 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/css.css">
 
+    <script>
+        $(document).ready(function() {
+        
+            $("#salvar").click(function(){
+                var obj = { Id : 0, Title : $("#title")[0].value, Body : $("#body-content")[0].value };
+                $.post("localhost:12739/insertpost/", obj);
+            });
+        
+        });
+    </script>
+    
 </head>
 <body>
 
@@ -128,8 +139,8 @@
                 </div>
                 
                 <div class="form-group">
-                    <label for="body" style="display:block;">Corpo:</label>
-                    <textarea class="fill-width" rows="8" cols="50"></textarea>
+                    <label for="body-content" style="display:block;">Corpo:</label>
+                    <textarea id="body-content" class="fill-width" rows="8" cols="50"></textarea>
                 </div>
 			</div>
 			<div class="modal-footer">

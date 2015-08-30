@@ -18,6 +18,19 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/css.css">
 
+    <script>
+        <script>
+        $(document).ready(function() {
+        
+            $("#salvar").click(function(){
+                var obj = { Id : 0, Name : $("#name")[0].value };
+                $.post("localhost:12739/inserttag/", obj);
+            });
+        
+        });
+    </script>
+    </script>
+    
 </head>
 <body>
 
