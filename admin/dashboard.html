@@ -1,0 +1,79 @@
+<html charset="UTF-8">
+<head>
+    <title>Admin Panel | Dashboard</title>
+    <meta charset="UTF-8">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    
+    <!-- AngularJS -->
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/css.css">
+
+</head>
+<body ng-app>
+
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+            <a class="navbar-brand stone-logo" href="dashboard.html">Stone Admin</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="index.html">Home</a></li>
+                <li><a href="post.html">Posts</a></li>
+                <li><a href="user.html">Usuários</a></li>
+                <li><a href="tag.html">Tags</a></li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="index.html">Logout</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <h1 class="text-center">Bem vindo ao admin panel do stone blog</h1>
+            <p class="text-justify">O stone blog foi criado como desafio da Stone, e desenvolvido por mim em pouco tempo. Espera-se que o resultado deste software consiga demonstrar minha capacidade de resolver problemas e minha disciplina de finalizar tarefas e me preocupar com detalhes.</p>
+            <p class="text-justify">Este software foi criado usando algumas tecnologias de ponta e usando alguns conceitos padrões de mercado hoje. Segue abaixo as tecnologias utilizadas.</p>
+            <ul class="ul-block text-center">
+                <li>Visual Studio 2013</li>
+                <li>C# + Web API 2</li>
+                <li>Entity Framework (Code First)</li>
+                <li>Newtonsoft.JSON</li>
+                <li>Ninject</li>
+                <li>Microsoft SQL Server</li>
+                <li>Domain Driven Design</li>
+                <li>RESTFUL API</li>
+                <li>HTML5 + JQuery + Bootstrap</li>
+                <li>AngularJS</li>
+            </ul>
+            <p class="text-justify">Finalmente, seja bem vindo ao painél de administrador. Selecione no menu a seção que deseja administrar e modifique os dados presentes no blog.</p>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+</div>
+    
+</body>
+</html>

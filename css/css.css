@@ -1,6 +1,7 @@
 html, body {
     margin: 0px;
     padding: 0px;
+    background-color: #DDD;
 }
 
 ul {
@@ -35,4 +36,28 @@ ul li {
 
 .post-tags-label {
     display: inline;
+}
+
+.login-row-fill {
+    height: 30%;
+}
+
+.login-label {
+    display: block;
+}
+
+.login-textbox {
+    width: 100%;
+}
+
+a.stone-logo, a.stone-logo :hover {
+    color: white;
+}
+
+ul.ul-block {
+    list-style-type: square;
+}
+
+ul.ul-block li {
+    display: block;
 }
