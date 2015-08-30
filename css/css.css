@@ -61,3 +61,7 @@ ul.ul-block {
 ul.ul-block li {
     display: block;
 }
+
+.fill-width {
+    width: 100%;
+}

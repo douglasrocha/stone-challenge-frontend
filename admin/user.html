@@ -49,6 +49,86 @@
         </div>
     </div>
 </nav>
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-1"></div>
     
+        <div class="col-md-10">
+            <h2>Usuários</h2>
+            <p class="text-justify">Crie, edite e delete seus usuários.</p>
+        
+            <br />
+        
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Nome de Usuário</th>
+                        <th>Senha</th>
+                        <th>Admin</th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td><button type="button" class="btn btn-success" data-toggle="modal" data-target="#modalCadastro">Adicionar</button></td>
+                    </tr>
+                </tfoot>
+                <tbody>
+                    <tr>
+                        <td>Admin</td>
+                        <td>********</td>
+                        <td>Sim</td>
+                    </tr>
+                    <tr>
+                        <td>Douglas</td>
+                        <td>********</td>
+                        <td>Sim</td>
+                    </tr>
+                    <tr>
+                        <td>Fulano</td>
+                        <td>********</td>
+                        <td>Náo</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    
+        <div class="col-md-1"></div>
+    </div>
+
+</div>
+
+<!-- Modal -->
+<div id="modalCadastro" class="modal fade" role="dialog">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">Cadastro de Post</h4>
+			</div>
+
+			<div class="modal-body">
+				<p>Preencha as informações do seu novo post</p>
+				<br />
+                <div class="form-group">
+                    <label for="title">Título:</label>
+                    <input type="text" class="form-control" id="title" name="title" />
+                </div>
+                
+                <div class="form-group">
+                    <label for="body" style="display:block;">Corpo:</label>
+                    <textarea class="fill-width" rows="8" cols="50"></textarea>
+                </div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" id="salvar" class="btn btn-success" data-dismiss="modal">Salvar</button>
+			</div>
+		</div>
+	</div>
+</div>
+
 </body>
 </html>
