@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="/css/css.css">
 
 </head>
-<body ng-app>
+<body>
 
 <nav class="navbar navbar-inverse">
     <div class="container-fluid">
@@ -64,6 +64,7 @@
             <table class="table table-hover">
                 <thead>
                     <tr>
+                        <th>Id</th>
                         <th>Nome de Usuário</th>
                         <th>Senha</th>
                         <th>Admin</th>
@@ -78,31 +79,28 @@
                         <td></td>
                         <td></td>
                         <td></td>
+                        <td></td>
                     </tr>
                 </tfoot>
-                <tbody>
-                    <tr>
-                        <td>Admin</td>
+                <tbody ng-app="myApp" ng-controller="myController">
+                    <tr ng-repeat="x in users">
+                        <td>{{ x.Id }}</td>
+                        <td>{{ x.Username }}</td>
                         <td>********</td>
-                        <td>Sim</td>
-                        <td><button type="button" class="btn btn-default editar" data-dismiss="modal">Editar</button></td>
-                        <td><button type="button" class="btn btn-danger excluir" data-dismiss="modal">Excluir</button></td>
-                    </tr>
-                    <tr>
-                        <td>Douglas</td>
-                        <td>********</td>
-                        <td>Sim</td>
-                        <td><button type="button" class="btn btn-default editar" data-dismiss="modal">Editar</button></td>
-                        <td><button type="button" class="btn btn-danger excluir" data-dismiss="modal">Excluir</button></td>
-                    </tr>
-                    <tr>
-                        <td>Fulano</td>
-                        <td>********</td>
-                        <td>Não</td>
+                        <td>{{ x.IsAdmin }}</td>
                         <td><button type="button" class="btn btn-default editar" data-dismiss="modal">Editar</button></td>
                         <td><button type="button" class="btn btn-danger excluir" data-dismiss="modal">Excluir</button></td>
                     </tr>
                 </tbody>
+                
+                <script>
+                    var app = angular.module("myApp", []);
+                    app.controller("myController", function($scope, $http) {            
+                        $http.get("http://localhost:12739/api/user").success(function(response) { 
+                            $scope.users = response; 
+                        });
+                    });
+                </script>   
             </table>
         </div>
     
